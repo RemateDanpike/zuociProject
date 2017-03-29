@@ -37,6 +37,7 @@
           "name":"皮蛋瘦肉粥",
           "price":10,
           "oldPrice":"",
+          "count":1,
           "description":"咸粥",
           "sellCount":520,
           "rating":100,
@@ -68,6 +69,7 @@
         {
           "name":"青菜鸡蛋粥",
           "price":9,
+          "count":2,
           "oldPrice":"11",
           "description":"咸粥",
           "sellCount":521,

@@ -25,19 +25,23 @@
                                 <div class="price">
                                     <span class="now">￥{{food.price}}</span><span class="old" v-show="food.oldPrice">￥{{food.oldPrice}}</span>
                                 </div>
+                                <div class="cartcontrol-wrapper">
+                                    <v-cartcontrol :food="food"></v-cartcontrol>
+                                </div>
                             </div>
                         </li>
                     </ul>
                 </li>
             </ul>
        </div>
-       <v-cart :delivery-price="seller.deliveryPrice" :min-price="seller.minPrice"></v-cart>
+       <v-cart :select-foods="selectFoods" :delivery-price="seller.deliveryPrice" :min-price="seller.minPrice"></v-cart>
    </div>
 </template>
 <script type="text/ecmascript-6">
     /* eslint-disable */
     import BScroll from "better-scroll";
     import shopCart from "./shopcart.vue";
+    import cartcontrol from './cartcontrol.vue';
     export default {
 //        props:['seller','goodthings'],
         data(){
@@ -58,6 +62,17 @@
                     }
                 }
                 return 0;
+            },
+            selectFoods(){
+                var foods = [];
+                this.goods.forEach((good) => {
+                    good.foods.forEach((food) => {
+                        if (food.count) {
+                            foods.push(food);
+                        }
+                    });
+                });
+                return foods;
             }
         },
         methods:{
@@ -76,6 +91,7 @@
                     click:true
                 });
                 this.foodsScroll = new BScroll(this.$refs.foodsWrapper,{
+                    click:true,
                     probeType:3
                 });
                 this.foodsScroll.on('scroll',(pos) => {
@@ -105,7 +121,8 @@
             })
         },
         components:{
-            'v-cart':shopCart
+            'v-cart':shopCart,
+            'v-cartcontrol':cartcontrol
         }
     }
 </script>
@@ -191,4 +208,8 @@
                             text-decoration line-through
                             font-size 10px
                             color: rgb(147,153,159)
+                    .cartcontrol-wrapper
+                        position: absolute
+                        right:0
+                        bottom:10px
 </style>
