@@ -21,6 +21,27 @@
 <script type="text/ecmascript-6">
     /* eslint-disable */
     export default{
+        data(){
+            return {
+                balls:[
+                    {
+                        show:true
+                    },
+                    {
+                        show:false
+                    },
+                    {
+                        show:false
+                    },
+                    {
+                        show:false
+                    },
+                    {
+                        show:false
+                    }
+                ]
+            }
+        },
         props:{
             selectFoods:{
               type:Array,

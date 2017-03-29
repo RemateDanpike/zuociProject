@@ -65,13 +65,13 @@
             },
             selectFoods(){
                 var foods = [];
-                this.goods.forEach((good) => {
-                    good.foods.forEach((food) => {
+                for(var i = 0; i < this.goods.length; i++){
+                    this.goods[i].foods.forEach((food) => {
                         if (food.count) {
                             foods.push(food);
                         }
                     });
-                });
+                }
                 return foods;
             }
         },
