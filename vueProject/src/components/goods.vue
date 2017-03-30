@@ -26,7 +26,7 @@
                                     <span class="now">￥{{food.price}}</span><span class="old" v-show="food.oldPrice">￥{{food.oldPrice}}</span>
                                 </div>
                                 <div class="cartcontrol-wrapper">
-                                    <v-cartcontrol :food="food"></v-cartcontrol>
+                                    <v-cartcontrol :food="food" @drop="_drop"></v-cartcontrol>
                                 </div>
                             </div>
                         </li>
@@ -34,7 +34,7 @@
                 </li>
             </ul>
        </div>
-       <v-cart :select-foods="selectFoods" :delivery-price="seller.deliveryPrice" :min-price="seller.minPrice"></v-cart>
+       <v-cart ref="shopCart" :select-foods="selectFoods" :delivery-price="seller.deliveryPrice" :min-price="seller.minPrice"></v-cart>
    </div>
 </template>
 <script type="text/ecmascript-6">
@@ -108,6 +108,9 @@
                     this.listHeight.push(height);
 //                    console.log(this.listHeight);
                 }
+            },
+            _drop(target){
+                this.$refs.shopCart.drop(target);
             }
         },
         created() {

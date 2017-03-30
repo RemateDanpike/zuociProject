@@ -25,16 +25,16 @@
                 if(!this.food.count){
                     Vue.set(this.food, 'count', 1);
                 } else {
-                    this.food.count ++;
+                    this.food.count++;
                 }
+                this.$emit('drop',event.target)
             },
             decreaseCart(){
                 if(!event._constructed){
                     return;
                 }
-                console.log(1)
                 if(this.food.count){
-                    this.food.count --;
+                    this.food.count--;
                 }
             }
         }
