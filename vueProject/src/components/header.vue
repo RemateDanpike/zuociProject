@@ -103,11 +103,11 @@
 <style lang="stylus" rel="stylesheet/stylus">
     @font-face
         font-family: 'icomoon'
-        src:  url('/static/fonts/icomoon.eot?gf9qb4');
-        src:  url('/static/fonts/icomoon.eot?gf9qb4#iefix') format('embedded-opentype'),
-              url('/static/fonts/icomoon.ttf?gf9qb4') format('truetype'),
-              url('/static/fonts/icomoon.woff?gf9qb4') format('woff'),
-              url('/static/fonts/icomoon.svg?gf9qb4#icomoon') format('svg');
+        src:  url('/static/fonts/icomoon.eot?wxcqzo');
+        src:  url('/static/fonts/icomoon.eot?wxcqzo#iefix') format('embedded-opentype'),
+              url('/static/fonts/icomoon.ttf?wxcqzo') format('truetype'),
+              url('/static/fonts/icomoon.woff?wxcqzo') format('woff'),
+              url('/static/fonts/icomoon.svg?wxcqzo#icomoon') format('svg');
         font-weight: normal
         font-style: normal
 
