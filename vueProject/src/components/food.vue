@@ -37,13 +37,13 @@
                                     <span class="name">{{rating.username}}</span>
                                     <img class="avatar" width="12" height="12" :src="rating.avatar">
                                 </div>
-                                <div class="time">{{rating.rateTime}}</div>
+                                <div class="time">{{rating.rateTime | formatDate}}</div>
                                 <p class="text">
                                     <span :class="{'icon-smile':rating.rateType===0,'icon-sad':rating.rateType===1}">{{rating.text}}</span>
                                 </p>
                             </li>
                         </ul>
-                        <div class="no-rating" v-show="!food.ratings || !food.ratings.length"></div>
+                        <div class="no-rating" v-show="!food.ratings || !food.ratings.length">暂无评价</div>
                     </div>
                 </div>
             </div>
@@ -78,6 +78,12 @@
                     positive:'推荐',
                     negative:'吐槽'
                 }
+            }
+        },
+        filters:{
+            formatDate(time){
+                var date = new Date(time);
+                return date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate()+' '+date.getHours()+':'+date.getMinutes()+':'+date.getSeconds();
             }
         },
         methods:{
@@ -287,4 +293,8 @@
                         margin-right 4px
                         line-height 16px
                         color: rgb(147,153,159)
+            .no-rating
+                padding:16px 0
+                font-size 12px
+                color: rgb(147,153,159)
 </style>
