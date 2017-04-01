@@ -97,7 +97,7 @@
             return {
                 ratings:[],
                 selectType:ALL,
-                onlyContent:true
+                onlyContent:false
             }
         },
         created() {
