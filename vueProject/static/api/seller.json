@@ -493,5 +493,37 @@
         }
       ]
     }
+  ],
+  "ratings":[
+    {
+      "username":"yy**y",
+      "rateTime":1469281964000,
+      "rateType":0,
+      "score":47,
+      "deliveryTime":52,
+      "rankRate":100,
+      "text":"哎哟，不错哦，好喝的粥~",
+      "avatar":"http://xqproduct.xiangqu.com/Fu_7nXh1BD-WxVuKSOPPXm4lD06K?imageView2/2/w/690/q/90/format/jpg/690x691/"
+    },
+    {
+      "username":"100yy**y001",
+      "rateTime":1469281964412,
+      "rateType":0,
+      "rankRate":100,
+      "deliveryTime":52,
+      "score":47,
+      "text":"",
+      "avatar":"http://xqproduct.xiangqu.com/FhHiF8BnnJBKENty2M34DvBjvgL2?imageView2/2/w/560/q/90/format/jpg/560x560/"
+    },
+    {
+      "username":"100yy**y001",
+      "rateTime":1469281964412,
+      "rateType":0,
+      "rankRate":100,
+      "deliveryTime":52,
+      "score":47,
+      "text":"",
+      "avatar":"http://xqproduct.xiangqu.com/FhHiF8BnnJBKENty2M34DvBjvgL2?imageView2/2/w/560/q/90/format/jpg/560x560/"
+    }
   ]
 }

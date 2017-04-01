@@ -17,12 +17,16 @@
             },
             size:{
                 type:Number
+            },
+            percent:{
+                type:Number,
+                default:1
             }
         },
         computed: {
             itemClasses() {
                 var result = [];
-                var score = Math.floor(this.score/10);//向下取整计算完整的星星个数
+                var score = Math.floor(this.score/(10*this.percent));//向下取整计算完整的星星个数
                 var hasDecimal = this.score % 10 !== 0;//求一半的星星个数
                 for( var i = 0; i<score; i++ ){
                     result.push(CLS_ON);

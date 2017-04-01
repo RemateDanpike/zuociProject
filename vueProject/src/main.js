@@ -30,4 +30,4 @@ new app({
     router
 }).$mount('#app');
 
-router.push('/goods');
+// router.push('/goods');  //默认跳转tab
