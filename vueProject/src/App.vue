@@ -6,7 +6,9 @@
       <router-link to="/comments" class="tab-item">评价</router-link>
       <router-link to="/sellers" class="tab-item">商家</router-link>
   </div>
-    <router-view :seller="seller" keep-alive></router-view>
+      <keep-alive>
+          <router-view :seller="seller"></router-view>
+      </keep-alive>
     <!--<router-view  :goodthings="goodthings"></router-view>-->
   </div>
 </template>
