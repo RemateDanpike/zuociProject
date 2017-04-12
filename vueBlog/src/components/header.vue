@@ -21,7 +21,7 @@ https://github.com/remate">github</a></li>
 <style lang="scss" rel="stylesheet/scss">
 header {
     height: 295px;
-    background: url("../../src/images/top.jpg") no-repeat;
+    background: url("../../static/images/top.jpg") no-repeat;
     background-size: 100%;
     overflow: hidden;
     h2 {
