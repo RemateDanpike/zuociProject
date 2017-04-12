@@ -1,17 +1,18 @@
 <template>
   <div id="app">
       <v-header></v-header>
-      <router-link to="/closure">理解闭包</router-link>
-      <router-link to="/prototype">理解原型</router-link>
-    <router-view></router-view>
+      <v-nav></v-nav>
+      <router-view></router-view>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
     import header from './components/header.vue';
+    import nav from './components/nav.vue';
     export default{
         components:{
-            'v-header':header
+            'v-header':header,
+            'v-nav':nav
         }
     }
 </script>

@@ -20,22 +20,23 @@ https://github.com/remate">github</a></li>
 
 <style lang="scss" rel="stylesheet/scss">
 header {
-    height: 280px;
+    height: 295px;
     background: url("../../src/images/top.jpg") no-repeat;
     background-size: 100%;
     overflow: hidden;
     h2 {
         font-size: 36px;
         font-family: '微软雅黑,幼圆,微软雅黑,微软雅黑';
-        margin-top: 180px;
+        margin-top: 166px;
     }
     .nav{
-        margin-left: 50px;
-        margin-top: 10px;
+        margin-left: 218px;
+        margin-top: 26px;
+        overflow: hidden;
         li{
             float: left;
             margin-right: 30px;
-            font-size: 14px;
+            font-size: 17px;
             color: #555;
             a{
                 display: inline-block;
