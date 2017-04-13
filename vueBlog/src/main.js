@@ -4,21 +4,23 @@ import Vue from 'vue';
 import App from './App';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
-import Closure from './components/closure.vue';
-import Prototype from './components/prototype.vue';
-import zxsxw from './components/zxsxw.vue';
+import prototypeClosure1 from './components/prototypeClouse1.vue';
+import prototypeClosure2 from './components/prototypeClouse2.vue';
+import zxsxw1 from './components/zxsxw1.vue';
+import zxsxw2 from './components/zxsxw2.vue';
 import This from './components/This.vue';
 import Flex from './components/flex.vue';
 import boxsizing from './components/boxsizing.vue';
 
-
+document.body.style.webkitUserSelect='none';
 /* eslint-disable no-new */
 Vue.use(VueRouter);
 Vue.use(VueResource);
 var routes = [
-    {path:'/closure',component:Closure},
-    {path:'/prototype',component:Prototype},
-    {path:'/zxsxw',component:zxsxw},
+    {path:'/prototypeClosure1',component:prototypeClosure1},
+    {path:'/prototypeClosure2',component:prototypeClosure2},
+    {path:'/zxsxw1',component:zxsxw1},
+    {path:'/zxsxw2',component:zxsxw2},
     {path:'/this',component:This},
     {path:'/flex',component:Flex},
     {path:'/boxsizing',component:boxsizing},
@@ -31,5 +33,7 @@ var app = Vue.extend(App);
 new app({
     router
 }).$mount('#app');
+
+// router.push('/flex');  //默认跳转tab
 
 

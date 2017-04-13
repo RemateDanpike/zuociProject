@@ -8,6 +8,7 @@
 /*/ / box-sizing: border-box;*/
 /*/ / -webit-box-sizing: border-box;*/
     outline: none;
+    text-align: justify;
 }
 
 html {

@@ -2,7 +2,9 @@
   <div id="app">
       <v-header></v-header>
       <v-nav></v-nav>
-      <router-view></router-view>
+      <div class="page-wrapper">
+          <router-view style="user-select: initial"></router-view>
+      </div>
   </div>
 </template>
 
@@ -23,6 +25,14 @@ body{
 }
 html{
     background: #c7cbbd;
+}
+.page-wrapper{
+    min-height: 500px;
+    background: #e8eee4;
+    width:725px;
+    float: right;
+    margin-top: 15px;
+    border-radius: 3px;
 }
 </style>
 

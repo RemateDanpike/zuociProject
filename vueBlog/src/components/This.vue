@@ -1,5 +1,5 @@
 <template>
-    <div class="page-wrapper">This</div>
+    <div>This</div>
 </template>
 
 <script type="text/ecmascript-6">

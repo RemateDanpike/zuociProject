@@ -2,11 +2,19 @@
     <div class="nav-wrapper">
         <h2 class="nav-title">我的标签</h2>
         <ul class="tab-ul">
-            <li v-for="tab in tabName" :class="tab.className" class="tab-li">
+            <li v-for="tab in tabName" class="tab-li">
                 <h2>{{tab.name}}</h2>
                 <ul class="list-ul">
-                    <li v-for="items in tab.list" class="list-li">
-                        <router-link :to="items.to" class="item">{{items.name}}</router-link>
+                    <li v-for="(items, index) in tab.list" class="list-li">
+                        <router-link v-if="items.to" :to="items.to" class="item">{{items.name}}</router-link>
+                        <div v-else>
+                            <h2 class="item" @click="showlist($event)">{{items.name}}<i class="dot">+</i></h2>
+                            <ul class="inner-ul">
+                                <li v-for="listDetail in items.listDetail" class="listDetail">
+                                    <router-link :to="listDetail.to" class="detail">{{listDetail.name}}</router-link>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </li>
@@ -19,14 +27,27 @@
     export default{
         data(){
             return {
-                tabName:{}
+                tabName:{},
+            }
+        },
+        methods:{
+            showlist($event){
+                if($event.target.className=='item listshow'){
+                    $event.target.parentNode.getElementsByClassName('inner-ul')[0].className='inner-ul';
+                    $event.target.className='item';
+                    $event.target.parentNode.getElementsByClassName('dot')[0].innerHTML='+';
+                } else {
+                    $event.target.parentNode.getElementsByClassName('inner-ul')[0].className='inner-ul show';
+                    $event.target.className='item listshow';
+                    $event.target.parentNode.getElementsByClassName('dot')[0].innerHTML='-';
+                }
+                ;
             }
         },
         created(){
             this.$http.get('./static/api/seller.json').then((res) => {
                 var response = res.body;
                 this.tabName = response.tabName;
-                console.log(this.tabName );
             })
         }
     }
@@ -48,6 +69,7 @@
     }
     .tab-ul{
         overflow: hidden;
+        border-radius: 3px;
         /*border: 1px dotted #eee;*/
         .tab-li{
             h2{
@@ -74,6 +96,30 @@
                     padding-left: 5px;
                     &:hover{
                         background: #e4e6e2;
+                    }
+                    .dot{
+                        float: right;
+                        margin-right: 10px;
+                    }
+                }
+                .listDetail{
+                    background:  #eff3eb;
+                    height:28px;
+                    line-height: 28px;
+                    &:hover{
+                        background: #e4e6e2;
+                    }
+                    .detail{
+                        display: block;
+                        font-size: 13px;
+                        color: #7d7676;
+                        padding-left: 20px;
+                    }
+                }
+                .inner-ul{
+                    display: none;
+                    &.show{
+                        display: block;
                     }
                 }
             }

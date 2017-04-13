@@ -1,44 +1,54 @@
 {
   "tabName": [
-   {
-      "name":"css",
-      "className": "cssList",
-      "list": [
-        {
-          "name": "flex布局",
-          "to": "/flex",
-          "pageNum": 1
-        },
-        {
-          "name": "box-sizing",
-          "to": "/boxsizing",
-          "pageNum": 2
-        }
-      ]
-    },
     {
       "name":"javascript",
       "className": "jsList",
       "list": [
         {
-          "name": "闭包",
-          "to": "/closure",
-          "pageNum": 1
-        },
-        {
-          "name": "原型",
-          "to": "/prototype",
-          "pageNum": 2
+          "name": "原型与闭包",
+          "to": "",
+          "listDetail":[
+            {
+              "name": "一切都是对象",
+              "to": "/prototypeClosure1"
+            },
+            {
+              "name": "函数和对象的关系",
+              "to": "/prototypeClosure2"
+            }
+          ]
         },
         {
           "name": "执行上下文",
-          "to": "/zxsxw",
-          "pageNum": 3
+          "to": "",
+          "listDetail":[
+            {
+              "name": "执行上下文(上)",
+              "to": "/zxsxw1"
+            },
+            {
+              "name": "执行上下文(下)",
+              "to": "/zxsxw2"
+            }
+          ]
         },
         {
           "name": "this",
-          "to": "/this",
-          "pageNum": 4
+          "to": "/this"
+        }
+      ]
+    },
+    {
+      "name":"css",
+      "className": "cssList",
+      "list": [
+        {
+          "name": "flex布局",
+          "to": "/flex"
+        },
+        {
+          "name": "box-sizing",
+          "to": "/boxsizing"
         }
       ]
     },

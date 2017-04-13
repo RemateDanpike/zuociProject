@@ -1,5 +1,5 @@
 <template>
-    <div class="page-wrapper">flex</div>
+    <div>flex</div>
 </template>
 
 <script type="text/ecmascript-6">

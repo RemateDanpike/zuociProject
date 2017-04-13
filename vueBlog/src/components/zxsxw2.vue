@@ -1,5 +1,5 @@
 <template>
-    <div class="page-wrapper">执行上下文</div>
+    <div>执行上下文2</div>
 </template>
 
 <script type="text/ecmascript-6">

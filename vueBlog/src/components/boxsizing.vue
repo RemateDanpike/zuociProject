@@ -1,5 +1,5 @@
 <template>
-    <div class="page-wrapper">boxsizing</div>
+    <div>boxsizing</div>
 </template>
 
 <script type="text/ecmascript-6">
