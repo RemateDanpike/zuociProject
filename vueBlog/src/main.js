@@ -34,6 +34,6 @@ new app({
     router
 }).$mount('#app');
 
-// router.push('/flex');  //默认跳转tab
+router.push('/prototypeClosure1');  //默认跳转tab
 
 

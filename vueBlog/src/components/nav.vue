@@ -75,25 +75,25 @@
             h2{
                 font-size: 18px;
                 font-weight: 500;
-                height:36px;
-                line-height: 36px;
+                height:41px;
+                line-height: 41px;
                 color: #55626e;
                 background: rgba(183, 175, 138, 0.31);
-                padding-left: 5px;
+                padding-left: 10px;
             }
             .list-ul{
                 .list-li{
                     overflow: hidden;
-                    border-bottom: 1px dotted #d4cdad;
                 }
                 .item{
                     color: #555;
                     font-size: 14px;
                     display: block;
-                    height:28px;
-                    line-height: 28px;
+                    height:34px;
+                    line-height: 34px;
                     background: #e8eee4;
-                    padding-left: 5px;
+                    padding-left: 10px;
+                    border-bottom: 1px dotted #d4cdad;
                     &:hover{
                         background: #e4e6e2;
                     }
@@ -106,6 +106,7 @@
                     background:  #eff3eb;
                     height:28px;
                     line-height: 28px;
+                    border-bottom: 1px dotted #eae6e6;
                     &:hover{
                         background: #e4e6e2;
                     }
@@ -113,7 +114,7 @@
                         display: block;
                         font-size: 13px;
                         color: #7d7676;
-                        padding-left: 20px;
+                        padding-left: 26px;
                     }
                 }
                 .inner-ul{
